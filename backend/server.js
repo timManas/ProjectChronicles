@@ -17,12 +17,7 @@ const PORT = 5000
 
 const app = express()
 
-// This is a test
-// app.get('/', async (req, res) => {
-//   const ProductToSend = await Product.find({})
-//   res.send(ProductToSend)
-// })
-
+// Use cors otherwise get CORS related errors ...
 app.use(cors())
 
 app.use('/products', productRoutes)
