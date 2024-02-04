@@ -13,7 +13,7 @@ Create simple spa which chronicles useful knowledge & wisdom in the field of AI 
 1. CreateBrowser is the latest BrowserRouter which allows API Calls
 2. In CreateRoutesFromElements, only a single Route parent is allowed
 3. In order to set Header and Footer with CreateBrowserApp, you need to:
-   - Define Header and Footer in App.js
+   - Define Header and Footer in App.js <br/>
    - Include App.js as the base element in createRoutesFromElements
 4. You will need to set index={true} on the HomePage
 5. Router will need to be provided in RouterProvider
@@ -25,11 +25,19 @@ Create simple spa which chronicles useful knowledge & wisdom in the field of AI 
 ### Key Lessons - BackEnd
 
 1. Start with implementing Base functionality in server.js.
-   - Then slowly add functionality in routes
-   - Then finally in controller.
-   - This will ensure you have consistent behaviour all the way
+   - Then slowly add functionality in routes <br/>
+   - Then finally in controller. <br/>
+   - This will ensure you have consistent behaviour all the way <br/>
 2. Use cors() to prevent CORS policy error
-3. You can define the .env in the root folder and have seperate Frontend and Backend funcitonality
-   - Define it in the rootfoler by providing the path ex: dotenv.config({path: '../.env',})
-4. Make sure to use asyncHandler to handle any errors during async requests
-   - Just import express-async-handlers instead of creating your own
+3. You can define the .env in the root folder and have seperate Frontend and Backend funcitonality <br/>
+   - Define it in the rootfoler by providing the path ex: dotenv.config({path: '../.env',}) <br/>
+4. Make sure to use asyncHandler to handle any errors during async requests <br/>
+   - Just import express-async-handlers instead of creating your own <br/>
+
+### Key Lessons - Project
+
+1. You can trigger both frontend and backend by creating a root package.json <br/>
+   and executing both concurrently <br/>
+   Ex: "backend": "npm run server --prefix backend", <br/>
+   "frontend": "npm run dev --prefix frontend", <br/>
+   "dev": "concurrently \"npm run backend\" \"npm run client\"", <br/>
