@@ -10,23 +10,20 @@ import {
 import HomePage from './screens/HomePage.jsx'
 import AboutPage from './screens/AboutPage.jsx'
 import ChroniclePage from './screens/ChroniclePage.jsx'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
+import App from './App.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
-      <Route path='/' element={<HomePage />} />
-      <Route path='about' element={<AboutPage />} />
-      <Route path='product/:id' element={<ChroniclePage />} />
+    <Route path='/' element={<App />}>
+      <Route index={true} path='/' element={<HomePage />} />
+      <Route path='/about' element={<AboutPage />} />
+      <Route path='/product/:id' element={<ChroniclePage />} />
     </Route>
   )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header />
     <RouterProvider router={router} />
-    <Footer />
   </React.StrictMode>
 )
