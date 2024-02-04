@@ -1,6 +1,5 @@
 import Product from '../models/productModel.js'
 import asyncHandler from 'express-async-handler'
-import { ObjectId } from 'mongodb'
 
 const getAllProducts = asyncHandler(async (req, res) => {
   const ProductToSend = await Product.find({})

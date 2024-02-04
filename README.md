@@ -1,8 +1,8 @@
 # Chronicles
 
-FrontEnd: React
-BackEnd: Node/Express
-DB: MongoDB
+FrontEnd: React <br/>
+BackEnd: Node/Express <br/>
+DB: MongoDB <br/>
 
 ## Purpose
 
