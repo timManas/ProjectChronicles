@@ -1,14 +1,43 @@
-import { Container, Nav, Navbar } from 'react-bootstrap'
+// import { Container, Nav, Navbar } from 'react-bootstrap'
+
+// const Footer = () => {
+//   return (
+//     <Navbar expand='lg' className='bg-body-tertiary'>
+//       <Container>
+//         <Nav className='me-auto'>
+//           <Nav.Link href='#home'>Contact Us</Nav.Link>
+//         </Nav>
+//       </Container>
+//     </Navbar>
+//   )
+// }
+
+import {
+  Box,
+  Container,
+  Stack,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react'
 
 const Footer = () => {
   return (
-    <Navbar expand='lg' className='bg-body-tertiary'>
-      <Container>
-        <Nav className='me-auto'>
-          <Nav.Link href='#home'>Contact Us</Nav.Link>
-        </Nav>
+    <Box
+      bg={useColorModeValue('gray.50', 'gray.900')}
+      color={useColorModeValue('gray.700', 'gray.200')}
+    >
+      <Container
+        as={Stack}
+        maxW={'6xl'}
+        py={4}
+        direction={{ base: 'column', md: 'row' }}
+        spacing={4}
+        justify={{ base: 'center', md: 'space-between' }}
+        align={{ base: 'center', md: 'center' }}
+      >
+        <Text>© 2024 Chronicles. All rights reserved</Text>
       </Container>
-    </Navbar>
+    </Box>
   )
 }
 

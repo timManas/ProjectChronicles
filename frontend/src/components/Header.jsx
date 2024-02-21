@@ -1,21 +1,16 @@
 import {
   Box,
   Flex,
-  Avatar,
   Text,
   Button,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useColorModeValue,
   Stack,
   useColorMode,
-  Center,
-  Image,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -26,9 +21,15 @@ const Header = () => {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-              <Box>Logo</Box>
-              <Box>Blogs</Box>
-              <Box>Reviews</Box>
+              <Link to='/'>
+                <Text>Logo</Text>
+              </Link>
+              <Link to='/chronicles'>
+                <Box>Chronicles</Box>
+              </Link>
+              <Link to='/about'>
+                <Box>About</Box>
+              </Link>
             </Stack>
           </Flex>
 
