@@ -7,6 +7,7 @@ import {
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
   return (
@@ -40,17 +41,21 @@ const HomePage = () => {
             perfect for beginners, pro, and everyone in between.
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-            <Button
-              rounded={'full'}
-              bg={'blue.400'}
-              color={'white'}
-              _hover={{
-                bg: 'blue.500',
-              }}
-            >
-              Export Chronicles
-            </Button>
-            <Button rounded={'full'}>About Us</Button>
+            <Link to='/chronicles'>
+              <Button
+                rounded={'full'}
+                bg={'blue.400'}
+                color={'white'}
+                _hover={{
+                  bg: 'blue.500',
+                }}
+              >
+                Explore Chronicles
+              </Button>
+            </Link>
+            <Link to='/about'>
+              <Button rounded={'full'}>About Us</Button>
+            </Link>
           </Stack>
         </Stack>
       </Flex>
@@ -59,7 +64,7 @@ const HomePage = () => {
           alt={'Login Image'}
           objectFit={'cover'}
           src={
-            'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+            'https://images.unsplash.com/photo-1627156399021-721b0f720f8d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           }
         />
       </Flex>
