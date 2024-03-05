@@ -1,4 +1,3 @@
-import CardItem from '../components/Card.jsx'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -15,6 +14,7 @@ import {
   useColorModeValue,
   Container,
   Stack,
+  SimpleGrid,
 } from '@chakra-ui/react'
 
 const BlogTags = (props) => {
@@ -145,7 +145,8 @@ const ChronicleListPage = () => {
         Latest articles
       </Heading>
 
-      <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+      {/* <Stack direction={{ base: 'column', md: 'row' }} spacing={4}> */}
+      <SimpleGrid columns={[2, null, 3]} spacing='40px'>
         <Wrap marginTop='5'>
           <WrapItem width={{ base: '100%' }}>
             <Box w='100%'>
@@ -225,7 +226,6 @@ const ChronicleListPage = () => {
             </Box>
           </WrapItem>
         </Wrap>
-
         <Wrap marginTop='5'>
           <WrapItem width={{ base: '100%' }}>
             <Box w='100%'>
@@ -265,7 +265,7 @@ const ChronicleListPage = () => {
             </Box>
           </WrapItem>
         </Wrap>
-      </Stack>
+      </SimpleGrid>
 
       <Divider marginTop='50' />
 
