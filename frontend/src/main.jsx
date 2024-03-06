@@ -10,6 +10,8 @@ import HomePage from './screens/HomePage.jsx'
 import AboutPage from './screens/AboutPage.jsx'
 import ChroniclePage from './screens/ChroniclePage.jsx'
 import ChronicleListPage from './screens/ChronicleListPage.jsx'
+import ContactPage from './screens/ContactPage.jsx'
+import AdvertisePage from './screens/AdvertisePage.jsx'
 import App from './App.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
 
@@ -18,6 +20,9 @@ const router = createBrowserRouter(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomePage />} />
       <Route path='/about' element={<AboutPage />} />
+      <Route path='/contact' element={<ContactPage />} />
+      <Route path='/advertise' element={<AdvertisePage />} />
+
       <Route path='/chronicles' element={<ChronicleListPage />} />
       <Route path='/chronicles/:id' element={<ChroniclePage />} />
     </Route>

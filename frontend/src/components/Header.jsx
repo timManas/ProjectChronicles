@@ -3,8 +3,6 @@ import {
   Flex,
   Text,
   Button,
-  Menu,
-  MenuButton,
   useColorModeValue,
   Stack,
   useColorMode,
@@ -22,13 +20,19 @@ const Header = () => {
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
               <Link to='/'>
-                <Text>Logo</Text>
+                <Text>Home</Text>
               </Link>
               <Link to='/chronicles'>
                 <Box>Chronicles</Box>
               </Link>
               <Link to='/about'>
                 <Box>About</Box>
+              </Link>
+              <Link to='/contact'>
+                <Box>Contact</Box>
+              </Link>
+              <Link to='/advertise'>
+                <Box>Advertise</Box>
               </Link>
             </Stack>
           </Flex>
@@ -38,16 +42,6 @@ const Header = () => {
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
-
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={'full'}
-                  variant={'link'}
-                  cursor={'pointer'}
-                  minW={0}
-                ></MenuButton>
-              </Menu>
             </Stack>
           </Flex>
         </Flex>

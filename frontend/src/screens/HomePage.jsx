@@ -53,8 +53,8 @@ const HomePage = () => {
                 Explore Chronicles
               </Button>
             </Link>
-            <Link to='/about'>
-              <Button rounded={'full'}>About Us</Button>
+            <Link to='/contact'>
+              <Button rounded={'full'}>Contact Us</Button>
             </Link>
           </Stack>
         </Stack>
