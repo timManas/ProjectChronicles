@@ -7,6 +7,7 @@ import {
   Tag,
   useColorModeValue,
 } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const BlogTags = (props) => {
   const { marginTop, tags } = props
@@ -42,7 +43,7 @@ const BlogAuthor = (props) => {
 
 const EditorsStory = () => {
   return (
-    <>
+    <Link to='/chronicles/1234'>
       <Box
         marginTop={{ base: '1', sm: '5' }}
         display='flex'
@@ -112,7 +113,7 @@ const EditorsStory = () => {
           <BlogAuthor name='John Doe' date={new Date('2021-04-06T19:01:27Z')} />
         </Box>
       </Box>
-    </>
+    </Link>
   )
 }
 
