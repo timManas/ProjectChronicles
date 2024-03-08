@@ -89,7 +89,7 @@ const ChronicleListPage = () => {
         Reviews
       </Heading>
 
-      <SimpleGrid columns={[2, null, 4]} spacing='40px'>
+      <SimpleGrid columns={[2, null, 4]} spacing='20px'>
         {reviews.map((review) => (
           <Wrap marginTop='5' key={review._id}>
             <WrapItem width={{ base: '100%' }}>
