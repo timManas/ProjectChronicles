@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import productRoutes from './routes/productRoutes.js'
+import articleRoutes from './routes/articleRoutes.js'
 import cors from 'cors'
 
 // This needs to be defined
@@ -20,7 +20,7 @@ const app = express()
 // Use cors otherwise get CORS related errors ...
 app.use(cors())
 
-app.use('/products', productRoutes)
+app.use('/api/articles', articleRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server running in Port: ${PORT}`)

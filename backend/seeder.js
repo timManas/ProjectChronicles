@@ -6,10 +6,9 @@ import articles from './data/articles.js'
 
 const addEntry = async () => {
   try {
-    console.log('MONGOURI: ' + process.env.MONGO_URI)
-    const conn = await mongoose.connect(process.env.MONGO_URI)
-    console.log('MongoDB connected: ' + conn.connection.host)
+    await mongoose.connect(process.env.MONGO_URI)
     await Article.insertMany(articles)
+    console.log('Finished Adding Data')
     process.exit(0)
   } catch (err) {
     console.error(err)
@@ -19,9 +18,9 @@ const addEntry = async () => {
 
 const deleteEntry = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI)
-    console.log('MongoDB connected: ' + conn.connection.host)
-    await Article.deleteMany(articles)
+    await mongoose.connect(process.env.MONGO_URI)
+    await Article.deleteMany()
+    console.log('Finished Removing Data')
     process.exit(0)
   } catch (err) {
     console.error(err)
