@@ -10,18 +10,51 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react'
 import EditorsStory from '../components/ListPage/EditorsPick.jsx'
-
 import ArticleCard from '../components/ListPage/ArticleCard.jsx'
 
 const ChronicleListPage = () => {
-  const [articles, setArticles] = useState([])
+  const [editorsPick, setEditorsPick] = useState([])
+  const [gearReview, setGearsReviews] = useState([])
+  const [reviews, setReviews] = useState([])
 
   useEffect(
     () => async () => {
       try {
-        const result = await axios.get('http://localhost:5000/api/articles')
+        const result = await axios.get(
+          'http://localhost:5000/api/articles/EditorsPick/1'
+        )
         console.log(result.data)
-        setArticles(result.data)
+        setEditorsPick(result.data['0'])
+      } catch (err) {
+        console.log(`error: ${err}`)
+      }
+    },
+    []
+  )
+
+  useEffect(
+    () => async () => {
+      try {
+        const result = await axios.get(
+          'http://localhost:5000/api/articles/Gear/3'
+        )
+        console.log(result.data)
+        setGearsReviews(result.data)
+      } catch (err) {
+        console.log(`error: ${err}`)
+      }
+    },
+    []
+  )
+
+  useEffect(
+    () => async () => {
+      try {
+        const result = await axios.get(
+          'http://localhost:5000/api/articles/Review/8'
+        )
+        console.log(result.data)
+        setReviews(result.data)
       } catch (err) {
         console.log(`error: ${err}`)
       }
@@ -32,32 +65,7 @@ const ChronicleListPage = () => {
   return (
     <Container maxW={'7xl'} p='12'>
       <Heading as='h1'>Editors Pick</Heading>
-      <EditorsStory />
-      <Divider marginTop='50' />
-
-      <Heading as='h2' marginTop='5'>
-        Latest articles
-      </Heading>
-
-      <SimpleGrid columns={[2, null, 3]} spacing='40px'>
-        <Wrap marginTop='5'>
-          <WrapItem width={{ base: '100%' }}>
-            <ArticleCard />
-          </WrapItem>
-        </Wrap>
-
-        <Wrap marginTop='5'>
-          <WrapItem width={{ base: '100%' }}>
-            <ArticleCard />
-          </WrapItem>
-        </Wrap>
-
-        <Wrap marginTop='5'>
-          <WrapItem width={{ base: '100%' }}>
-            <ArticleCard />
-          </WrapItem>
-        </Wrap>
-      </SimpleGrid>
+      <EditorsStory {...editorsPick} />
 
       <Divider marginTop='50' />
 
@@ -66,24 +74,30 @@ const ChronicleListPage = () => {
       </Heading>
 
       <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-        <Wrap marginTop='5'>
-          <WrapItem width={{ base: '100%' }}>
-            <ArticleCard />
-          </WrapItem>
-        </Wrap>
-
-        <Wrap marginTop='5'>
-          <WrapItem width={{ base: '100%' }}>
-            <ArticleCard />
-          </WrapItem>
-        </Wrap>
-
-        <Wrap marginTop='5'>
-          <WrapItem width={{ base: '100%' }}>
-            <ArticleCard />
-          </WrapItem>
-        </Wrap>
+        {gearReview.map((gear) => (
+          <Wrap marginTop='5' key={gear._id}>
+            <WrapItem width={{ base: '100%' }}>
+              <ArticleCard {...gear} />
+            </WrapItem>
+          </Wrap>
+        ))}
       </Stack>
+
+      <Divider marginTop='50' />
+
+      <Heading as='h2' marginTop='5'>
+        Reviews
+      </Heading>
+
+      <SimpleGrid columns={[2, null, 4]} spacing='40px'>
+        {reviews.map((review) => (
+          <Wrap marginTop='5' key={review._id}>
+            <WrapItem width={{ base: '100%' }}>
+              <ArticleCard {...review} />
+            </WrapItem>
+          </Wrap>
+        ))}
+      </SimpleGrid>
     </Container>
   )
 }

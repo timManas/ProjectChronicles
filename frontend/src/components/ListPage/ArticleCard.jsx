@@ -3,17 +3,23 @@ import BlogTags from './BlogTags.jsx'
 import BlogAuthor from './BlogAuthor.jsx'
 import { Link } from 'react-router-dom'
 
-const ArticleCard = () => {
+const ArticleCard = ({
+  _id,
+  title,
+  image,
+  description,
+  brand,
+  category,
+  createdAt,
+}) => {
   return (
-    <Link to='/chronicles/1234'>
+    <Link to={`/chronicles/${_id}`}>
       <Box w='100%'>
         <Box borderRadius='lg' overflow='hidden'>
           <Box textDecoration='none' _hover={{ textDecoration: 'none' }}>
             <Image
               transform='scale(1.0)'
-              src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-              }
+              src={image}
               alt='some text'
               objectFit='contain'
               width='100%'
@@ -24,19 +30,16 @@ const ArticleCard = () => {
             />
           </Box>
         </Box>
-        <BlogTags tags={['Engineering', 'Product']} marginTop={3} />
+        <BlogTags tags={[category]} marginTop={3} />
         <Heading fontSize='xl' marginTop='2'>
           <Text textDecoration='none' _hover={{ textDecoration: 'none' }}>
-            Some blog title
+            {title}
           </Text>
         </Heading>
         <Text as='p' fontSize='md' marginTop='2'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book.
+          {description}
         </Text>
-        <BlogAuthor name='John Doe' date={new Date('2021-04-06T19:01:27Z')} />
+        <BlogAuthor name='John Doe' date={new Date(createdAt)} />
       </Box>
     </Link>
   )
