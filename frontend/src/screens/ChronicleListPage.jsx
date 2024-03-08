@@ -14,18 +14,17 @@ import EditorsStory from '../components/ListPage/EditorsPick.jsx'
 import ArticleCard from '../components/ListPage/ArticleCard.jsx'
 
 const ChronicleListPage = () => {
-  const [products, setProduct] = useState([])
+  const [articles, setArticles] = useState([])
 
   useEffect(
     () => async () => {
-      await axios
-        .get('http://localhost:5000/products')
-        .then((result) => {
-          setProduct(result.data)
-        })
-        .catch((error) => {
-          console.log(`error: ${error}`)
-        })
+      try {
+        const result = await axios.get('http://localhost:5000/api/articles')
+        console.log(result.data)
+        setArticles(result.data)
+      } catch (err) {
+        console.log(`error: ${err}`)
+      }
     },
     []
   )

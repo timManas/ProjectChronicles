@@ -9,6 +9,19 @@ const getAllArticles = async (req, res) => {
   }
 }
 
+const getArticles = async (req, res) => {
+  try {
+    console.log('ArticleType: ' + req.params.articleType)
+    console.log('Num: ' + req.params.num)
+    const article = await Article.find({ category: req.params.articleType })
+      .sort({ _id: -1 })
+      .limit(req.params.num)
+    res.send(article)
+  } catch (err) {
+    res.send('Article Not Found')
+  }
+}
+
 const getArticle = async (req, res) => {
   try {
     console.log('id: ' + req.params.id)
@@ -19,4 +32,4 @@ const getArticle = async (req, res) => {
   }
 }
 
-export { getAllArticles, getArticle }
+export { getAllArticles, getArticle, getArticles }

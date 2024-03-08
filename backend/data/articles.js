@@ -1,6 +1,6 @@
 const articles = [
   {
-    name: 'Celebration at the start',
+    name: 'Celebration at the start 1',
     image:
       'https://images.unsplash.com/photo-1628689529124-3e0db67e984c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
@@ -16,7 +16,7 @@ const articles = [
     },
   },
   {
-    name: 'Endeavour beyond',
+    name: 'Endeavour beyond 2',
     image:
       'https://images.unsplash.com/photo-1627900258552-50850df9dbc5?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
@@ -32,7 +32,7 @@ const articles = [
     },
   },
   {
-    name: 'Lorem ipsum dolor',
+    name: 'Lorem ipsum dolor 3',
     image:
       'https://images.unsplash.com/photo-1533547477463-bcffb9ef386d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
@@ -48,7 +48,7 @@ const articles = [
     },
   },
   {
-    name: 'ipsum dolor ',
+    name: 'ipsum dolor 4 ',
     image:
       'https://images.unsplash.com/photo-1538992409240-dc1a2ae11e7b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
@@ -64,7 +64,7 @@ const articles = [
     },
   },
   {
-    name: 'Celebration at the start',
+    name: 'Celebration at the start 5',
     image:
       'https://images.unsplash.com/photo-1521415946093-cad36def6c34?q=80&w=2667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
@@ -80,7 +80,7 @@ const articles = [
     },
   },
   {
-    name: 'Ipsum dolor',
+    name: 'Ipsum dolor 6',
     image:
       'https://images.unsplash.com/photo-1631727078062-91a5552e7888?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRyaWF0aGxvbnxlbnwwfHwwfHx8Mg%3D%3D',
     description:
@@ -96,7 +96,7 @@ const articles = [
     },
   },
   {
-    name: 'Celebration at the start',
+    name: 'Celebration at the start 7',
     image:
       'https://images.unsplash.com/photo-1628689529124-3e0db67e984c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
@@ -112,7 +112,7 @@ const articles = [
     },
   },
   {
-    name: 'Sed interdum semper n',
+    name: 'Sed interdum semper n 8',
     image:
       'https://images.unsplash.com/photo-1603969214776-54caa7197d1d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyaWF0aGxvbnxlbnwwfHwwfHx8Mg%3D%3D',
     description:
@@ -128,7 +128,7 @@ const articles = [
     },
   },
   {
-    name: 'Sed interdum semper n',
+    name: 'Sed interdum semper n 9',
     image:
       'https://images.unsplash.com/photo-1619707282084-b63b3336f5ef?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
@@ -144,7 +144,7 @@ const articles = [
     },
   },
   {
-    name: 'Ut nec fringilla odiot',
+    name: 'Ut nec fringilla odiot 10',
     image:
       'https://images.unsplash.com/photo-1533049426476-9a889e21ece5?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
