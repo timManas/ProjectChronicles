@@ -23,7 +23,6 @@ const ChronicleListPage = () => {
         const result = await axios.get(
           'http://localhost:5000/api/articles/EditorsPick/1'
         )
-        console.log(result.data)
         setEditorsPick(result.data['0'])
       } catch (err) {
         console.log(`error: ${err}`)
@@ -38,7 +37,6 @@ const ChronicleListPage = () => {
         const result = await axios.get(
           'http://localhost:5000/api/articles/Gear/3'
         )
-        console.log(result.data)
         setGearsReviews(result.data)
       } catch (err) {
         console.log(`error: ${err}`)
@@ -53,7 +51,6 @@ const ChronicleListPage = () => {
         const result = await axios.get(
           'http://localhost:5000/api/articles/Review/8'
         )
-        console.log(result.data)
         setReviews(result.data)
       } catch (err) {
         console.log(`error: ${err}`)
