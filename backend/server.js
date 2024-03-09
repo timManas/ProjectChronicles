@@ -1,24 +1,19 @@
-import express from 'express'
 import dotenv from 'dotenv'
-import articleRoutes from './routes/articleRoutes.js'
-import cors from 'cors'
-
 // This needs to be defined
 dotenv.config({
   path: '../.env',
 })
+import express from 'express'
+import articleRoutes from './routes/articleRoutes.js'
+import cors from 'cors'
 
 import connectDB from './config/db.js'
 
-// Setup DB
 connectDB()
 
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 
 const app = express()
-
-// Use cors otherwise get CORS related errors ...
-app.use(cors())
 
 app.use('/api/articles', articleRoutes)
 

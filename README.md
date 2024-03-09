@@ -41,3 +41,17 @@ Create simple spa which chronicles useful knowledge & wisdom in the field of AI 
    Ex: "backend": "npm run server --prefix backend", <br/>
    "frontend": "npm run dev --prefix frontend", <br/>
    "dev": "concurrently \"npm run backend\" \"npm run client\"", <br/>
+
+### TODO
+
+Phase 1
+
+1. Create proper edited Articles
+2. Prepare App for Production Launch
+3. Setup Render for release
+4. Setup DomainName for release
+5. Register to for Affiliate Links
+
+Phase 2
+
+1. Revise App to suit content of AffiliateLinks
