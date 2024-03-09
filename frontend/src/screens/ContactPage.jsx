@@ -14,6 +14,9 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  AspectRatio,
+  SimpleGrid,
+  Stack,
 } from '@chakra-ui/react'
 
 import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from 'react-icons/md'
@@ -21,25 +24,22 @@ import { BsPerson } from 'react-icons/bs'
 
 const ContactPage = () => {
   return (
-    <Container maxW='full' mt={0} centerContent overflow='hidden'>
-      <Flex>
-        <Box
-          bg='#02054B'
-          color='white'
-          borderRadius='lg'
-          m={{ sm: 4, md: 16, lg: 10 }}
-          p={{ sm: 5, md: 5, lg: 16 }}
-        >
-          <Box p={4}>
+    <>
+      <Flex justify='center' align='center'>
+        <Box color='white' borderRadius='lg' p={{ sm: 5, md: 5, lg: 10 }}>
+          <Box>
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box>
-                  <Heading>Contact</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color='gray.500'>
-                    Get in Touch !
-                  </Text>
+                  <Heading>Advertise With Us</Heading>
+
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                    <VStack pl={0} spacing={3} alignItems='flex-start'>
+                    <VStack pl={0} spacing={3} alignItems='center'>
+                      <Text color='gray.500'>
+                        <p>Looking to Collab ? Send us a message ! </p>
+                        <p> We are always looking to work with the </p>
+                        <p>best and upcoming people in the industry </p>
+                      </Text>
                       <Button
                         size='md'
                         height='48px'
@@ -60,7 +60,7 @@ const ContactPage = () => {
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdEmail color='#1970F1' size='20px' />}
                       >
-                        hello@abc.com
+                        timRom@protonmail.com
                       </Button>
                       <Button
                         size='md'
@@ -82,7 +82,7 @@ const ContactPage = () => {
                   <Box m={8} color='#0B0E3F'>
                     <VStack spacing={5}>
                       <FormControl id='name'>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel>Your Name</FormLabel>
                         <InputGroup borderColor='#E0E1E7'>
                           <InputLeftElement pointerEvents='none'>
                             <BsPerson color='gray.800' />
@@ -127,7 +127,11 @@ const ContactPage = () => {
           </Box>
         </Box>
       </Flex>
-    </Container>
+
+      <AspectRatio ratio={3 / 1}>
+        <iframe src='https://maps.google.com/maps?width=25%25&amp;height=400&amp;hl=en&amp;q=Toronto,%20Ontario,%20Canada+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed' />
+      </AspectRatio>
+    </>
   )
 }
 

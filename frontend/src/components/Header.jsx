@@ -31,9 +31,9 @@ const Header = () => {
               <Link to='/contact'>
                 <Box>Contact</Box>
               </Link>
-              <Link to='/advertise'>
+              {/* <Link to='/advertise'>
                 <Box>Advertise</Box>
-              </Link>
+              </Link> */}
             </Stack>
           </Flex>
 
