@@ -17,47 +17,50 @@ const ChronicleListPage = () => {
   const [gearReview, setGearsReviews] = useState([])
   const [reviews, setReviews] = useState([])
 
-  useEffect(
-    () => async () => {
-      try {
-        console.log('Editors Pick Start')
-        const result = await axios.get('/api/articles/EditorsPick/1')
-        setEditorsPick(result.data['0'])
-        console.log(editorsPick)
-      } catch (err) {
-        console.log(`error: ${err}`)
-      }
-    },
-    [setEditorsPick]
-  )
+  useEffect(() => {
+    fetchEditorsArticles('1')
+  }, [setEditorsPick])
 
-  // useEffect(
-  //   () => async () => {
-  //     try {
-  //       console.log('Gear Start')
-  //       const result = await axios.get('/api/articles/Gear/3')
-  //       setGearsReviews(result.data)
-  //       console.log(gearReview)
-  //     } catch (err) {
-  //       console.log(`error: ${err}`)
-  //     }
-  //   },
-  //   [setGearsReviews]
-  // )
+  const fetchEditorsArticles = async (qty) => {
+    try {
+      console.log('Editors Pick Start')
+      const result = await axios.get(`/api/articles/EditorsPick/${qty}`)
+      setEditorsPick(result.data['0'])
+      console.log(editorsPick)
+    } catch (err) {
+      console.log(`error: ${err}`)
+    }
+  }
 
-  // useEffect(
-  //   () => async () => {
-  //     try {
-  //       console.log('Review Start')
-  //       const result = await axios.get('/api/articles/Review/8')
-  //       setReviews(result.data)
-  //       console.log(reviews)
-  //     } catch (err) {
-  //       console.log(`error: ${err}`)
-  //     }
-  //   },
-  //   [setReviews]
-  // )
+  useEffect(() => {
+    fetchGearArticles('3')
+  }, [setGearsReviews])
+
+  const fetchGearArticles = async (qty) => {
+    try {
+      console.log('Gear Start')
+      const result = await axios.get(`/api/articles/Gear/${qty}`)
+      setGearsReviews(result.data)
+      console.log(gearReview)
+    } catch (err) {
+      console.log(`error: ${err}`)
+    }
+  }
+
+  useEffect(() => {
+    fetchReviewArticles('8')
+  }, [setReviews])
+
+  const fetchReviewArticles = async (qty) => {
+    try {
+      console.log('Review Start')
+      const result = await axios.get(`/api/articles/Review/${qty}`)
+      setReviews(result.data)
+      console.log(reviews)
+    } catch (err) {
+      console.log(`error: ${err}`)
+    }
+  }
 
   return (
     <Container maxW={'7xl'} p='12'>
