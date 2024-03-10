@@ -27,9 +27,7 @@ const ChroniclePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get(
-          `http://localhost:5000/api/articles/${id}`
-        )
+        const result = await axios.get(`/api/articles/${id}`)
         console.log('result data: ' + JSON.stringify(result.data))
         setIsLoading(false)
         setArticle(result.data)

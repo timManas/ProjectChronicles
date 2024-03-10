@@ -20,9 +20,7 @@ const ChronicleListPage = () => {
   useEffect(
     () => async () => {
       try {
-        const result = await axios.get(
-          'http://localhost:5000/api/articles/EditorsPick/1'
-        )
+        const result = await axios.get('/api/articles/EditorsPick/1')
         setEditorsPick(result.data['0'])
       } catch (err) {
         console.log(`error: ${err}`)
@@ -34,9 +32,7 @@ const ChronicleListPage = () => {
   useEffect(
     () => async () => {
       try {
-        const result = await axios.get(
-          'http://localhost:5000/api/articles/Gear/3'
-        )
+        const result = await axios.get('/api/articles/Gear/3')
         setGearsReviews(result.data)
       } catch (err) {
         console.log(`error: ${err}`)
@@ -48,9 +44,7 @@ const ChronicleListPage = () => {
   useEffect(
     () => async () => {
       try {
-        const result = await axios.get(
-          'http://localhost:5000/api/articles/Review/8'
-        )
+        const result = await axios.get('api/articles/Review/8')
         setReviews(result.data)
       } catch (err) {
         console.log(`error: ${err}`)
