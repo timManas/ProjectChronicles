@@ -20,6 +20,7 @@ const ChronicleListPage = () => {
   useEffect(
     () => async () => {
       try {
+        console.log('Editors Pick Start')
         const result = await axios.get('/api/articles/EditorsPick/1')
         setEditorsPick(result.data['0'])
         console.log(editorsPick)
@@ -33,6 +34,7 @@ const ChronicleListPage = () => {
   useEffect(
     () => async () => {
       try {
+        console.log('Gear Start')
         const result = await axios.get('/api/articles/Gear/3')
         setGearsReviews(result.data)
         console.log(gearReview)
@@ -46,6 +48,7 @@ const ChronicleListPage = () => {
   useEffect(
     () => async () => {
       try {
+        console.log('Review Start')
         const result = await axios.get('/api/articles/Review/8')
         setReviews(result.data)
         console.log(reviews)
