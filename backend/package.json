@@ -5,6 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
+    "build": "npm install",
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "seeder": "node seeder.js",
