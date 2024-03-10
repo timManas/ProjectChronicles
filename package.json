@@ -7,7 +7,8 @@
     "backend": "npm run server --prefix backend",
     "frontend": "npm run client --prefix frontend",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Tim Manas",
   "license": "ISC",
