@@ -1,3 +1,4 @@
+import path from 'path'
 import dotenv from 'dotenv'
 // This needs to be defined
 dotenv.config({
