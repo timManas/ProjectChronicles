@@ -22,11 +22,12 @@ const ChronicleListPage = () => {
       try {
         const result = await axios.get('/api/articles/EditorsPick/1')
         setEditorsPick(result.data['0'])
+        console.log(editorsPick)
       } catch (err) {
         console.log(`error: ${err}`)
       }
     },
-    []
+    [setEditorsPick]
   )
 
   useEffect(
@@ -34,11 +35,12 @@ const ChronicleListPage = () => {
       try {
         const result = await axios.get('/api/articles/Gear/3')
         setGearsReviews(result.data)
+        console.log(gearReview)
       } catch (err) {
         console.log(`error: ${err}`)
       }
     },
-    []
+    [setGearsReviews]
   )
 
   useEffect(
@@ -46,11 +48,12 @@ const ChronicleListPage = () => {
       try {
         const result = await axios.get('/api/articles/Review/8')
         setReviews(result.data)
+        console.log(reviews)
       } catch (err) {
         console.log(`error: ${err}`)
       }
     },
-    []
+    [setReviews]
   )
 
   return (
