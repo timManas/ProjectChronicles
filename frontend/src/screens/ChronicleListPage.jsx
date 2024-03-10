@@ -44,7 +44,7 @@ const ChronicleListPage = () => {
   useEffect(
     () => async () => {
       try {
-        const result = await axios.get('api/articles/Review/8')
+        const result = await axios.get('/api/articles/Review/8')
         setReviews(result.data)
       } catch (err) {
         console.log(`error: ${err}`)
