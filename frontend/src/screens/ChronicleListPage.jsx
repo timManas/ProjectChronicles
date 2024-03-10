@@ -31,33 +31,33 @@ const ChronicleListPage = () => {
     [setEditorsPick]
   )
 
-  useEffect(
-    () => async () => {
-      try {
-        console.log('Gear Start')
-        const result = await axios.get('/api/articles/Gear/3')
-        setGearsReviews(result.data)
-        console.log(gearReview)
-      } catch (err) {
-        console.log(`error: ${err}`)
-      }
-    },
-    [setGearsReviews]
-  )
+  // useEffect(
+  //   () => async () => {
+  //     try {
+  //       console.log('Gear Start')
+  //       const result = await axios.get('/api/articles/Gear/3')
+  //       setGearsReviews(result.data)
+  //       console.log(gearReview)
+  //     } catch (err) {
+  //       console.log(`error: ${err}`)
+  //     }
+  //   },
+  //   [setGearsReviews]
+  // )
 
-  useEffect(
-    () => async () => {
-      try {
-        console.log('Review Start')
-        const result = await axios.get('/api/articles/Review/8')
-        setReviews(result.data)
-        console.log(reviews)
-      } catch (err) {
-        console.log(`error: ${err}`)
-      }
-    },
-    [setReviews]
-  )
+  // useEffect(
+  //   () => async () => {
+  //     try {
+  //       console.log('Review Start')
+  //       const result = await axios.get('/api/articles/Review/8')
+  //       setReviews(result.data)
+  //       console.log(reviews)
+  //     } catch (err) {
+  //       console.log(`error: ${err}`)
+  //     }
+  //   },
+  //   [setReviews]
+  // )
 
   return (
     <Container maxW={'7xl'} p='12'>
