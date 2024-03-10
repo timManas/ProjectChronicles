@@ -27,7 +27,7 @@ const ChronicleListPage = () => {
         console.log(`error: ${err}`)
       }
     },
-    [editorsPick]
+    [setEditorsPick]
   )
 
   useEffect(
@@ -40,7 +40,7 @@ const ChronicleListPage = () => {
         console.log(`error: ${err}`)
       }
     },
-    [gearReview]
+    [setGearsReviews]
   )
 
   useEffect(
@@ -53,7 +53,7 @@ const ChronicleListPage = () => {
         console.log(`error: ${err}`)
       }
     },
-    [reviews]
+    [setReviews]
   )
 
   return (

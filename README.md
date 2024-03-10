@@ -55,3 +55,8 @@ Phase 1
 Phase 2
 
 1. Revise App to suit content of AffiliateLinks
+
+### Issues Resolved
+
+1. MIME type ("text/html") -> Make sure to set the proper folder in './frontend/dist'
+   "app.use(express.static(path.join(\_\_dirname, './frontend/dist')))"
