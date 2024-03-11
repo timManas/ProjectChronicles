@@ -14,6 +14,7 @@ import ContactPage from './screens/ContactPage.jsx'
 import AdvertisePage from './screens/AdvertisePage.jsx'
 import App from './App.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
+import theme from './theme.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +31,7 @@ const router = createBrowserRouter(
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
