@@ -1,19 +1,20 @@
 import axios from 'axios'
+import DOMPurify from 'dompurify'
+import parse from 'html-react-parser'
 import {
   Box,
   Container,
   Stack,
   Text,
   Image,
-  Flex,
   VStack,
   Heading,
   SimpleGrid,
-  StackDivider,
   useColorModeValue,
   List,
   ListItem,
   Spinner,
+  Avatar,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -46,8 +47,8 @@ const ChroniclePage = () => {
         <Container maxW={'7xl'}>
           <SimpleGrid
             columns={{ base: 1, lg: 1 }}
-            spacing={{ base: 1, md: 10 }}
-            py={{ base: 18, md: 24 }}
+            spacing={{ base: 1, md: 1 }}
+            py={{ base: 4, md: 6 }}
           >
             <Stack spacing={{ base: 6, md: 10 }}>
               <Box as={'header'}>
@@ -56,154 +57,123 @@ const ChroniclePage = () => {
                   fontWeight={600}
                   fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}
                 >
-                  {article.title}
+                  {DOMPurify.sanitize(article.title)}
                 </Heading>
+
                 <Text
                   color={useColorModeValue('gray.900', 'gray.400')}
                   fontWeight={300}
                   fontSize={'2xl'}
                 >
-                  {article.articlePage.price}
+                  {DOMPurify.sanitize(article.articlePage.price)}
                 </Text>
+
+                <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
+                  <Avatar
+                    src={
+                      'https://avatars.githubusercontent.com/u/6054824?s=96&v=4'
+                    }
+                  />
+                  <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+                    <Text fontWeight={600}>
+                      {DOMPurify.sanitize(article.articlePage.author)}
+                    </Text>
+                    <Text color={'gray.500'}>
+                      {DOMPurify.sanitize(article.articlePage.date)}
+                    </Text>
+                  </Stack>
+                </Stack>
               </Box>
             </Stack>
-            <Flex>
-              <Image
-                rounded={'md'}
-                alt={'product image'}
-                src={article.image}
-                fit={'cover'}
-                align={'center'}
-                w={'100%'}
-                h={{ base: '100%', sm: '400px', lg: '500px' }}
-              />
-            </Flex>
-            <Stack spacing={{ base: 6, md: 10 }}>
-              {/* <Box as={'header'}>
-                <Heading
-                  lineHeight={1.1}
-                  fontWeight={600}
-                  fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}
-                >
-                  {article.title}
-                </Heading>
-                <Text
-                  color={useColorModeValue('gray.900', 'gray.400')}
-                  fontWeight={300}
-                  fontSize={'2xl'}
-                >
-                  {article.articlePage.price}
-                </Text>
-              </Box> */}
 
-              <Stack
-                spacing={{ base: 4, sm: 6 }}
-                direction={'column'}
-                divider={
-                  <StackDivider
-                    borderColor={useColorModeValue('gray.200', 'gray.600')}
-                  />
-                }
-              >
+            <Stack spacing={{ base: 6, md: 10 }}>
+              <Stack spacing={{ base: 4, sm: 6 }} direction={'column'}>
                 <VStack spacing={{ base: 4, sm: 6 }}>
                   <Text
                     color={useColorModeValue('gray.500', 'gray.400')}
                     fontSize={'2xl'}
                     fontWeight={'300'}
                   >
-                    {article.articlePage.header}
+                    {DOMPurify.sanitize(article.articlePage.intro)}
                   </Text>
-                  <Text fontSize={'lg'}>{article.description}</Text>
+
+                  <Image
+                    rounded={'md'}
+                    alt={'product image'}
+                    src={article.image}
+                    fit={'cover'}
+                    align={'center'}
+                    w={'100%'}
+                    h={{ base: '100%', sm: '200px', lg: '400px' }}
+                    mt={4}
+                    mb={4}
+                  />
                 </VStack>
-                <Box>
-                  <Text
-                    fontSize={{ base: '16px', lg: '18px' }}
-                    color={useColorModeValue('yellow.500', 'yellow.300')}
-                    fontWeight={'500'}
-                    textTransform={'uppercase'}
-                    mb={'4'}
-                  >
-                    Features
-                  </Text>
-
-                  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                    <List spacing={2}>
-                      <ListItem>Chronograph</ListItem>
-                      <ListItem>Master Chronometer Certified</ListItem>{' '}
-                      <ListItem>Tachymeter</ListItem>
-                    </List>
-                    <List spacing={2}>
-                      <ListItem>Anti‑magnetic</ListItem>
-                      <ListItem>Chronometer</ListItem>
-                      <ListItem>Small seconds</ListItem>
-                    </List>
-                  </SimpleGrid>
-                </Box>
-
-                <Image
-                  rounded={'md'}
-                  alt={'product image'}
-                  src={article.image}
-                  fit={'cover'}
-                  align={'center'}
-                  w={'100%'}
-                  h={{ base: '100%', sm: '400px', lg: '500px' }}
-                />
 
                 <Box>
-                  <Text
-                    fontSize={{ base: '16px', lg: '18px' }}
-                    color={useColorModeValue('yellow.500', 'yellow.300')}
-                    fontWeight={'500'}
-                    textTransform={'uppercase'}
-                    mb={'4'}
-                  >
-                    Product Details
-                  </Text>
-
                   <List spacing={2}>
                     <ListItem>
-                      <Text as={'span'} fontWeight={'bold'}>
-                        Between lugs:
-                      </Text>{' '}
-                      20 mm
+                      <Box>
+                        {parse(
+                          DOMPurify.sanitize(article.articlePage.paragraph1)
+                        )}
+
+                        <>
+                          {article.articlePage.image1 && (
+                            <Box display='flex' justifyContent='center'>
+                              <Image
+                                rounded={'md'}
+                                alt={'product image'}
+                                src={article.articlePage.image1}
+                                fit={'cover'}
+                                align={'center'}
+                                w={'70%'}
+                                h={{ base: '100%', sm: '200px', lg: '400px' }}
+                                mt={4}
+                                mb={4}
+                              />
+                            </Box>
+                          )}
+                        </>
+                      </Box>
                     </ListItem>
                     <ListItem>
-                      <Text as={'span'} fontWeight={'bold'}>
-                        Bracelet:
-                      </Text>{' '}
-                      leather strap
+                      <Box>
+                        {parse(
+                          DOMPurify.sanitize(article.articlePage.paragraph2)
+                        )}
+                      </Box>
                     </ListItem>
                     <ListItem>
-                      <Text as={'span'} fontWeight={'bold'}>
-                        Case:
-                      </Text>{' '}
-                      Steel
+                      <Box>
+                        {parse(
+                          DOMPurify.sanitize(article.articlePage.paragraph3)
+                        )}
+
+                        <>
+                          {article.articlePage.image2 && (
+                            <Box display='flex' justifyContent='center'>
+                              <Image
+                                rounded={'md'}
+                                alt={'product image'}
+                                src={article.articlePage.image2}
+                                fit={'cover'}
+                                align={'center'}
+                                w={'70%'}
+                                h={{ base: '100%', sm: '200px', lg: '400px' }}
+                                mt={4}
+                                mb={4}
+                              />
+                            </Box>
+                          )}
+                        </>
+                      </Box>
                     </ListItem>
+
                     <ListItem>
-                      <Text as={'span'} fontWeight={'bold'}>
-                        Case diameter:
-                      </Text>{' '}
-                      42 mm
-                    </ListItem>
-                    <ListItem>
-                      <Text as={'span'} fontWeight={'bold'}>
-                        Dial color:
-                      </Text>{' '}
-                      Black
-                    </ListItem>
-                    <ListItem>
-                      <Text as={'span'} fontWeight={'bold'}>
-                        Crystal:
-                      </Text>{' '}
-                      Domed, scratch‑resistant sapphire crystal with
-                      anti‑reflective treatment inside
-                    </ListItem>
-                    <ListItem>
-                      <Text as={'span'} fontWeight={'bold'}>
-                        Water resistance:
-                      </Text>{' '}
-                      5 bar (50 metres / 167 feet){' '}
+                      <Box>
+                        {parse(DOMPurify.sanitize(article.articlePage.outro))}
+                      </Box>
                     </ListItem>
                   </List>
                 </Box>
