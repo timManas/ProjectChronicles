@@ -45,11 +45,11 @@ const ChroniclePage = () => {
     <>
       {isLoading && <Spinner />}
       {!isLoading && (
-        <Container maxW={'7xl'}>
+        <Container maxW={'7xl'} p={10}>
           <SimpleGrid
             columns={{ base: 1, lg: 1 }}
             spacing={{ base: 1, md: 1 }}
-            py={{ base: 4, md: 6 }}
+            py={{ base: 4, md: 1 }}
           >
             <Stack spacing={{ base: 6, md: 10 }}>
               <Box as={'header'}>
