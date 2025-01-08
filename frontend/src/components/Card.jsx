@@ -60,9 +60,7 @@ const CardItem = (prop) => {
           <Text color={'gray.500'}>{prop.description}</Text>
         </Stack>
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Avatar
-            src={'https://avatars.githubusercontent.com/u/6054824?s=96&v=4'}
-          />
+          <Avatar src={'https://i.pravatar.cc/300'} />
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
             <Text fontWeight={600}>Tim M</Text>
             <Text color={'gray.500'}>Feb 08, 2024</Text>
