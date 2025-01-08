@@ -1,161 +1,30 @@
 const articles = [
   {
-    title: 'Celebration at the start 1',
+    title: 'General #2',
     image:
       'https://images.unsplash.com/photo-1628689529124-3e0db67e984c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Gear',
+    description: 'Harsh Realities which every Triathlete needs to deal with.',
+    brand: '',
     category: 'Review',
     articlePage: {
-      price: '$35.00',
+      author: 'Tim Romero',
+      date: '01/01/2025',
+      price: '',
       header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Endeavour beyond 2',
-    image:
-      'https://images.unsplash.com/photo-1627900258552-50850df9dbc5?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Duis',
-    category: 'Review',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Lorem ipsum dolor 3',
-    image:
-      'https://images.unsplash.com/photo-1533547477463-bcffb9ef386d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Duis',
-    category: 'Gear',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'ipsum dolor 4 ',
-    image:
-      'https://images.unsplash.com/photo-1538992409240-dc1a2ae11e7b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Nunc',
-    category: 'Review',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor t at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Celebration at the start 5',
-    image:
-      'https://images.unsplash.com/photo-1521415946093-cad36def6c34?q=80&w=2667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Amet',
-    category: 'Review',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at ipsum dolor  expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Ipsum dolor 6',
-    image:
-      'https://images.unsplash.com/photo-1631727078062-91a5552e7888?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRyaWF0aGxvbnxlbnwwfHwwfHx8Mg%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Apple',
-    category: 'Review',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Celebration at the start 7',
-    image:
-      'https://images.unsplash.com/photo-1628689529124-3e0db67e984c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Apple',
-    category: 'Review',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Sed interdum semper n 8',
-    image:
-      'https://images.unsplash.com/photo-1603969214776-54caa7197d1d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyaWF0aGxvbnxlbnwwfHwwfHx8Mg%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'ipsum',
-    category: 'Gear',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Sed interdum semper n 9',
-    image:
-      'https://images.unsplash.com/photo-1619707282084-b63b3336f5ef?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis.Sed interdum semper n Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'Google',
-    category: 'Review',
-    articlePage: {
-      price: '$35.00',
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
-    },
-  },
-  {
-    title: 'Ut nec fringilla odiot 10',
-    image:
-      'https://images.unsplash.com/photo-1533049426476-9a889e21ece5?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis odales tempor turpis. Ut nec fringilla odio. Nunc iaculis viverra commodo. Sed interdum semper neque, in auctor purus molestie quis',
-    brand: 'ipsum',
-    category: 'EditorsPick',
-    articlePage: {
-      header:
-        "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.'",
-      details:
-        'Detail: 20 | Bracelet: leather strap | Case: Steel | Case diameter: 42 mm',
+        'General #1 - The Truth About Being a Triathlete: Five Harsh Realities',
+      intro:
+        'Being a triathlete is an incredible experience. It’s a sport that challenges your mind, body, and spirit while offering a sense of community, personal achievement, and joy. But like any pursuit, triathlon comes with its share of hard truths. These realities don’t take away from the love you have for the sport; instead, they’re part of what makes triathlon so rewarding. The sooner you acknowledge and embrace them, the better equipped you’ll be to tackle the challenges ahead. Let’s dive into five tough but valuable lessons about the sport you love.',
+      paragraph1:
+        '<h1 style="font-size: 2em; font-weight: bold;">1. Your Last PB Will Come </h1>Triathlon is unique in its longevity—you can compete and train well into your golden years. Many triathletes find joy in knowing they can stay active for decades. However, no matter how fit and focused you are, the truth is that aging will eventually limit your ability to keep breaking personal bests (PBs). For some, this realization can be difficult. After all, the pursuit of improvement is a driving force behind many athletes\' efforts. When you reach this point, it’s not the end of the road—it’s a chance to redefine your goals. Instead of chasing lifetime PBs, look at new benchmarks. Can you complete a half-Ironman this season faster than last? How does your time compare to peers in your age group? By reframing success, you’ll stay motivated and continue to enjoy the process of training and racing.Additionally, remember that PBs aren’t just about speed. Consider goals like completing a new distance, mastering transitions, or improving mental toughness. Celebrate the victories you achieve, big and small, because they’re all part of your growth as an athlete. <h1 style="font-size: 2em; font-weight: bold;">2. You’ll Probably Never Be the Best</h1> Triathlon has its superstars—world champions, Olympic medallists, and professional athletes who seem almost superhuman. While it’s inspiring to follow their careers, it’s essential to remember that their paths are not the norm. Most triathletes won’t reach elite status, and that’s okay. Rather than focusing on comparisons, center your efforts on personal growth. Ask yourself: How can I improve my technique? How can I push my limits in training and races? Every step forward, no matter how small, is progress. Even if you never win a race or make it to the podium, triathlon offers something far greater: the opportunity to become your best self. You’ll discover strengths you didn’t know you had and develop resilience that carries over into every aspect of your life.',
+      image1:
+        'https://images.unsplash.com/photo-1628689529124-3e0db67e984c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      paragraph2:
+        '<h1 style="font-size: 2em; font-weight: bold;">3. Not Everyone Cares About Triathlon</h1> It’s no secret—triathletes love to talk about the sport. From recounting past races to strategizing for upcoming ones, the passion for triathlon often spills into everyday conversations. Unfortunately, not everyone shares that enthusiasm. For those who don’t participate in the sport, detailed discussions about aero bars or tapering strategies might not be as riveting as they are for you. This can feel isolating at times, but it’s also an opportunity to connect more deeply with your fellow athletes. Save the in-depth race recaps for training buddies or online communities where others share your passion. With non-triathletes, focus on the broader picture: share how the sport has positively impacted your life or helped you overcome challenges. Triathlon might not be everyone’s cup of tea, but your dedication and excitement can still inspire others, even if they don’t fully understand the sport. <h1 style="font-size: 2em; font-weight: bold;">4. Injuries Are Inevitable</h1> Triathlon pushes you to your limits, combining three physically demanding disciplines into one sport. Over time, the likelihood of injury increases, whether it’s from overtraining, poor form, or just bad luck. This is one of the most frustrating realities for athletes because injuries often feel like a roadblock to progress. However, injuries can also be an opportunity for growth. Use downtime to focus on other aspects of your fitness—rehabilitation, flexibility, mental toughness, or nutrition. Many athletes find that injuries teach them patience and gratitude for their bodies.Prevention is also key. Invest time in proper warmups, cooldowns, and strength training to reduce the risk of common injuries like shin splints, IT band syndrome, or shoulder strain. Listen to your body and know when to take a step back. Triathlon is a long game, and staying healthy ensures you can enjoy it for years to come.',
+      image2: '',
+      paragraph3:
+        '<h1 style="font-size: 2em; font-weight: bold;">5. There’s Always Room for Improvement</h1> Even after crossing the finish line in what feels like the race of your life, you’ll likely find areas for improvement. Maybe your swim wasn’t as efficient as it could have been, your bike pacing felt slightly off, or you burned out too early in the run. No matter how well you perform, perfection is elusive in triathlon. This endless potential for growth is one of the sport’s greatest gifts. Each race and training session is a chance to learn something new about yourself and refine your skills. Embrace this reality, and you’ll never run out of reasons to keep striving. Take a moment to celebrate your successes along the way, but also recognize that the process of improvement is what makes triathlon so fulfilling. Without room for growth, the sport would lose its excitement and purpose. Bonus Reality: It’s Not Cheap Triathlon isn’t just physically demanding—it’s financially demanding, too. From race entry fees and travel costs to equipment and training gear, the expenses can add up quickly. While this can be a barrier for some, there are ways to make the sport more affordable. Look for second-hand gear, train with a local club, and prioritize your purchases. Remember that the most important investment is in yourself, not the latest gadgets.',
+      outro:
+        'Final Thoughts Triathlon is more than just a sport—it’s a way of life. These harsh realities are part of the experience, but they don’t define it. Instead, they highlight the resilience, adaptability, and passion that triathletes bring to every race and training session. By embracing these truths, you’ll deepen your connection to the sport and find even greater joy in the journey.',
     },
   },
 ]
