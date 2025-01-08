@@ -6,6 +6,7 @@ import {
   Container,
   Stack,
   Text,
+  Flex,
   Image,
   VStack,
   Heading,
@@ -106,8 +107,8 @@ const ChroniclePage = () => {
                     w={'100%'}
                     h={{ base: '100%', sm: '200px', lg: '400px' }}
                     mt={4}
-                    mb={4}
                   />
+                  <Text>Credit: {article.imageCred}</Text>
                 </VStack>
 
                 <Box>
@@ -120,19 +121,33 @@ const ChroniclePage = () => {
 
                         <>
                           {article.articlePage.image1 && (
-                            <Box display='flex' justifyContent='center'>
-                              <Image
-                                rounded={'md'}
-                                alt={'product image'}
-                                src={article.articlePage.image1}
-                                fit={'cover'}
-                                align={'center'}
-                                w={'70%'}
-                                h={{ base: '100%', sm: '200px', lg: '400px' }}
-                                mt={4}
-                                mb={4}
-                              />
-                            </Box>
+                            <Flex
+                              justifyContent='center'
+                              alignItems='center'
+                              direction='column'
+                            >
+                              <Box
+                                display='flex'
+                                justifyContent='center'
+                                alignItems='center'
+                                flexDirection='column'
+                              >
+                                <Image
+                                  rounded={'md'}
+                                  alt={'product image'}
+                                  src={article.articlePage.image1}
+                                  fit={'cover'}
+                                  align={'center'}
+                                  w={'70%'}
+                                  h={{ base: '100%', sm: '200px', lg: '400px' }}
+                                  mt={4}
+                                  mb={4}
+                                />
+                                <Text>
+                                  Credit: {article.articlePage.image1Credit}
+                                </Text>
+                              </Box>
+                            </Flex>
                           )}
                         </>
                       </Box>
@@ -152,19 +167,33 @@ const ChroniclePage = () => {
 
                         <>
                           {article.articlePage.image2 && (
-                            <Box display='flex' justifyContent='center'>
-                              <Image
-                                rounded={'md'}
-                                alt={'product image'}
-                                src={article.articlePage.image2}
-                                fit={'cover'}
-                                align={'center'}
-                                w={'70%'}
-                                h={{ base: '100%', sm: '200px', lg: '400px' }}
-                                mt={4}
-                                mb={4}
-                              />
-                            </Box>
+                            <Flex
+                              justifyContent='center'
+                              alignItems='center'
+                              direction='column'
+                            >
+                              <Box
+                                display='flex'
+                                justifyContent='center'
+                                alignItems='center'
+                                flexDirection='column'
+                              >
+                                <Image
+                                  rounded={'md'}
+                                  alt={'product image'}
+                                  src={article.articlePage.image2}
+                                  fit={'cover'}
+                                  align={'center'}
+                                  w={'70%'}
+                                  h={{ base: '100%', sm: '200px', lg: '400px' }}
+                                  mt={4}
+                                  mb={4}
+                                />
+                                <Text>
+                                  Credit: {article.articlePage.image2Credit}
+                                </Text>
+                              </Box>
+                            </Flex>
                           )}
                         </>
                       </Box>
