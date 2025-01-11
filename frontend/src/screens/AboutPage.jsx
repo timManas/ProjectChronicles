@@ -121,7 +121,7 @@ const AboutPage = () => {
               rounded={'md'}
               alt={'feature image'}
               src={
-                'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+                'https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               }
               objectFit={'cover'}
             />
@@ -129,30 +129,18 @@ const AboutPage = () => {
         </SimpleGrid>
 
         <Text as='p' p={20} fontSize='lg'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
+          As a passionate triathlete myself, I’ve spent years immersed in the
+          sport, combining personal experience with professional training to
+          help athletes achieve their goals. Whether you’re a beginner looking
+          to complete your first race or a seasoned competitor aiming for a new
+          personal best, I bring a personalized, evidence-based approach to
+          every athlete’s journey. My philosophy centers on balancing smart
+          training, injury prevention, and mental resilience to ensure
+          sustainable progress and success. Triathlon isn’t just a sport—it’s a
+          lifestyle, and I’m here to guide you every step of the way as you
+          chase your dreams and unlock your full potential.
         </Text>
-      </Container>
-
-      <Box maxW='7xl' mx={'auto'} px={{ base: 2, sm: 12, md: 17 }}>
-        <chakra.h1
-          textAlign={'center'}
-          fontSize={'4xl'}
-          py={10}
-          fontWeight={'bold'}
-        >
-          What is our company doing?
-        </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-          <StatsCard title={'We serve'} stat={'50,000+ people'} />
-          <StatsCard title={'In'} stat={'30+ different countries'} />
-          <StatsCard title={'Who Race'} stat={'WorldWide'} />
-        </SimpleGrid>
-      </Box>
+      </Container>{' '}
     </>
   )
 }
